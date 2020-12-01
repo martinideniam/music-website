@@ -1,0 +1,293 @@
+//variables
+$background-color: #2f303a;
+$button-color: #1762a7;
+$button-color-hover: #1d77ca;
+$bubble-blue: #2a3a50;
+$bubble-pink: #4b3248;
+$pink: #bc3a80;
+$footer: #202027;
+$icon: #eaeaea;
+$input: #8094c6;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//general
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 300;
+}
+
+body {
+  background: $background-color;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.link-footer,
+.feature-title,
+.signup-title {
+  font-weight: 700;
+}
+
+//header
+
+header {
+  background: $footer;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 10vh;
+  z-index: 3;
+  @include flex(row, center, center);
+}
+
+.logo-img {
+  height: 30px;
+}
+
+.header-div {
+  color: white;
+  width: 80%;
+  height: 100%;
+  @include flex(row, space-between, center);
+}
+
+.logo-img-text {
+  @include flex(row, flex-start, center);
+  flex: 1;
+}
+
+.nav-section {
+  flex: 1;
+}
+
+.links {
+  @include flex(row, flex-end, center);
+  list-style: none;
+}
+
+.link-li {
+  margin: 2rem;
+}
+
+.links li a {
+  font-size: 1.5rem;
+}
+
+.logo-text {
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin: 1rem;
+}
+
+//footer
+footer {
+  background: $footer;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  min-height: 10vh;
+  @include flex(row, center, center);
+  z-index: 3;
+}
+
+.footer-div {
+  width: 80%;
+  @include flex(row, space-between, center);
+}
+
+.footer-links-internal {
+  @include flex(row, flex-start, center);
+}
+
+.footer-links-external {
+  @include flex(row, flex-start, center);
+}
+
+.external-link,
+.link-footer-internal {
+  margin: 2rem;
+}
+
+.external-link img {
+  height: 1.2rem;
+  margin-right: 0.2rem;
+}
+
+.link-footer {
+  font-size: 1.5rem;
+}
+
+//sections
+section {
+  min-height: 100vh;
+  position: relative;
+  @include flex(row, space-between, center);
+  overflow: hidden;
+  color: white;
+}
+
+//landing
+.landing-image-div {
+  flex: 1;
+  height: 100vh;
+  @include flex(row, flex-end, flex-end);
+}
+
+.hero-img {
+  height: 80%;
+  object-fit: bottom;
+}
+
+.landing-text-button {
+  flex: 1;
+  height: 70vh;
+  @include flex(column, space-evenly, center);
+}
+
+.landing-text {
+  font-size: 2.6rem;
+  color: white;
+}
+
+.join-button {
+  padding: 1.5rem 4rem;
+  border-radius: 0.7rem;
+  margin: 2rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: white;
+  background: $button-color;
+}
+
+//feature section
+.feature-section {
+  @include flex(row, space-between, center);
+  margin: auto;
+  width: 80%;
+}
+
+.feature-content-div {
+  height: 529px;
+  @include flex(column, space-between, flex-start);
+}
+
+.feature-icons {
+  @include flex(row, space-between, center);
+}
+
+.feature-icon-div {
+  margin-right: 3rem;
+  height: 110px;
+  width: 122px;
+  background: $background-color;
+  @include flex(column, center, center);
+}
+
+.feature-title {
+  font-size: 5rem;
+}
+
+.feature-text {
+  font-size: 2.3rem;
+}
+
+//sign up page
+.signup-section {
+  @include flex(row, space-between, center);
+  width: 80%;
+  margin: auto;
+}
+
+.signup-title {
+  font-size: 5rem;
+}
+
+.signup-span {
+  font-size: 8rem;
+  color: $pink;
+}
+
+.signup-form {
+  background: $footer;
+  width: 50rem;
+  height: 40rem;
+  @include flex(row, center, center);
+}
+
+.signup-form > form {
+  width: 80%;
+  @include flex(column, center, flex-start);
+}
+
+input,
+.button-form {
+  width: 100%;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input {
+  padding: 1.2rem;
+  background: $footer;
+  border: 1px solid $input;
+  border-radius: 0.7rem;
+}
+
+.join-button {
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background: $button-color-hover;
+}
+
+.button-form {
+  border: none;
+  margin: 2rem 0 0 0;
+  font-weight: 700;
+}
+
+//bubbles on main page
+
+.bubbles {
+  position: absolute;
+}
+
+.bubble-1 {
+  bottom: 100px;
+  left: 100px;
+  z-index: -1;
+}
+
+.bubble-3 {
+  bottom: 0;
+  right: -100px;
+  z-index: -1;
+}
+
+.bubble-2 {
+  top: 150px;
+  left: 40%;
+  z-index: -1;
+}
