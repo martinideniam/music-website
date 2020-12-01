@@ -198,7 +198,7 @@ section {
   margin-right: 3rem;
   height: 110px;
   width: 122px;
-  background: $background-color;
+  background: $footer;
   @include flex(column, center, center);
 }
 
@@ -211,7 +211,7 @@ section {
 }
 
 //sign up page
-.signup-section {
+.signup-section-content {
   @include flex(row, space-between, center);
   width: 80%;
   margin: auto;
@@ -289,5 +289,18 @@ input {
 .bubble-2 {
   top: 150px;
   left: 40%;
+  z-index: -1;
+}
+
+//bubbles from sign up page
+.bubble-4 {
+  bottom: -100px;
+  left: -100px;
+  z-index: -1;
+}
+
+.bubble-5 {
+  top: -100px;
+  left: 0;
   z-index: -1;
 }
